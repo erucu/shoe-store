@@ -10,6 +10,28 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="action_instruction">Instruction</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bio">Hi, my name is Aleks.
+\n\nI love fish.
+\n\nThe kind that is alive and swims around in an aquarium or river, or a lake, and definitely the ocean.
+\n\nFun fact is that I have several aquariums and also a river.
+\nI like eating fish, too. Raw fish. Grilled fish. Smoked fish. Poached fish - not so much.
+\n\nAnd sometimes I even go fishing.
+\nAnd even less sometimes, I actually catch something.\n\n</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+\n\nAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\n\n</string>
+    <string name="instruction_one_text">
+        "Press the three dots in the\n"
+        "upper right corner to logout.\n\n"
+        "Press the pink button to add \n"
+        "new shoes to the list"
+    </string>
+    <string name="instruction_two_text">
+        "Fill the fields and select\n"
+        "the size of the shoe"
+    </string>
 </resources>
