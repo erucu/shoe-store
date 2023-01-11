@@ -25,13 +25,10 @@ sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
 sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\n\n</string>
     <string name="instruction_one_text">
-        "Press the three dots in the\n"
-        "upper right corner to logout.\n\n"
-        "Press the pink button to add \n"
-        "new shoes to the list"
+        "Instruction"
     </string>
     <string name="instruction_two_text">
-        "Fill the fields and select\n"
-        "the size of the shoe"
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
     </string>
 </resources>
