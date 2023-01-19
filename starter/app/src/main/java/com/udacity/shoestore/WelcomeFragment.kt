@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
-class WelcomFragment : Fragment(){
+class WelcomeFragment : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
