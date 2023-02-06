@@ -1,16 +1,17 @@
-<layout xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/shoe_list" >
 
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             <LinearLayout
+                    android:id="@+id/shoeElementList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" />
@@ -29,4 +30,10 @@
                 app:layout_constraintHorizontal_bias="0.923"
                 app:layout_constraintVertical_bias="0.976" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.udacity.shoestore.ShoeListViewModel" />
+    </data>
 </layout>

@@ -35,4 +35,8 @@ sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
     <string name="logout">Logout</string>
     <string name="next">Next</string>
     <string name="title_login">Login ShoeStore</string>
+    <string name="shoeName">Shoe name</string>
+    <string name="company">Company</string>
+    <string name="shoeSize">Shoe size</string>
+    <string name="description">Description</string>
 </resources>
