@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:maxLength="2"
+
                 android:text="@={shoe.shoeSize}"
                 android:hint="@string/shoeSize"
                 android:ems="10"

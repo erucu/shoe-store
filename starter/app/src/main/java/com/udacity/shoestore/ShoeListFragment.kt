@@ -2,8 +2,6 @@ package com.udacity.shoestore
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
-import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ItemShoeBinding
 
 
 class ShoeListFragment : Fragment() {
@@ -33,6 +32,14 @@ class ShoeListFragment : Fragment() {
                 .navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
 
+        for (i in 0..5) {
+            val temporaryShoeObject = Shoe(shoeName = "SampleShoe_$i")
+            val itemShoeBinding =
+                ItemShoeBinding.inflate(layoutInflater, binding.shoeElementList, false)
+            itemShoeBinding.shoe = temporaryShoeObject
+            binding.shoeElementList.addView(itemShoeBinding.root)
+        }
+
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -45,22 +52,5 @@ class ShoeListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = DataBindingUtil.setContentView(, R.layout.fragment_shoe_list)
-
-        val myLayout: LinearLayout = findViewById(R.id.fragment_shoe_list)
-
-        val myButton = Button(this)
-        myButton.layoutParams = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.MATCH_PARENT
-        )
-
-        myLayout.addView(myButton)
-
     }
 }
