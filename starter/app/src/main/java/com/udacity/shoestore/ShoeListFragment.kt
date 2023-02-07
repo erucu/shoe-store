@@ -8,9 +8,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ItemShoeBinding
+import kotlinx.android.synthetic.main.fragment_shoe_detail.*
 
 
 class ShoeListFragment : Fragment() {
@@ -28,19 +28,24 @@ class ShoeListFragment : Fragment() {
             Navigation.findNavController(view)
                 .navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
+
         for (i in 0..5) {
-            val temporaryShoeObject = Shoe(shoeName = "SampleShoe_$i")
-            val itemShoeBinding = ItemShoeBinding.inflate(layoutInflater, binding.shoeElementList, false)
+            val temporaryShoeObject = Shoe(shoeName = "Shoe name $i", shoeCompany = "Company $i", shoeSize = "$i", shoeDescription = "Tennis shoe")
+            val itemShoeBinding =
+                ItemShoeBinding.inflate(layoutInflater, binding.shoeElementList, false)
             itemShoeBinding.shoe = temporaryShoeObject
             binding.shoeElementList.addView(itemShoeBinding.root)
         }
+
         setHasOptionsMenu(true)
         return binding.root
     }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
