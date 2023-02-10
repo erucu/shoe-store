@@ -95,6 +95,6 @@
     <data>
         <variable
                 name="shoe"
-                type="com.udacity.shoestore.Shoe" />
+                type="com.udacity.shoestore.ShoeDataView" />
     </data>
 </layout>

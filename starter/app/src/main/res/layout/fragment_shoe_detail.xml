@@ -8,8 +8,8 @@
         <!-- Declare a variable by specifying a name and a data type. -->
         <!-- Use fully qualified name for the type. -->
         <variable
-                name="shoe"
-                type="com.udacity.shoestore.Shoe" />
+                name="viewModel"
+                type="com.udacity.shoestore.ShoeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="@={shoe.shoeName}"
+                android:text="@={viewModel.shoeDataView.shoeName}"
                 android:hint="@string/shoeName"
                 android:ems="10"
                 android:id="@+id/editTextShoeName"
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="@={shoe.shoeCompany}"
+                android:text="@={viewModel.shoeDataView.shoeCompany}"
                 android:hint="@string/company"
                 android:ems="10"
                 android:id="@+id/editTextCompany"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
 
-                android:text="@={shoe.shoeSize}"
+                android:text="@={viewModel.shoeDataView.shoeSize}"
                 android:hint="@string/shoeSize"
                 android:ems="10"
                 android:id="@+id/editTextShoeSize"
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:text="@={shoe.shoeDescription}"
+                android:text="@={viewModel.shoeDataView.shoeDescription}"
                 android:hint="@string/description"
                 android:gravity="start|top"
                 android:ems="10"
@@ -129,6 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonCancel"
+                android:onClick="@{() -> viewModel.onCancel()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
@@ -140,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/buttonSave"
-                android:onClick="saveShoe"
+                android:onClick="@{() -> viewModel.onSave()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
