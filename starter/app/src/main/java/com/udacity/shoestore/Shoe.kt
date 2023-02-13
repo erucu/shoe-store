@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Shoe(
     var shoeName: String,
-    var shoeSize: String,
+    var shoeSize: Int,
     var shoeCompany: String,
     var shoeDescription: String,
 ) : Parcelable

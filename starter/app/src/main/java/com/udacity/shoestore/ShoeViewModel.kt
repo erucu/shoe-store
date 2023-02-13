@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.udacity.shoestore.ShoeDataMapper
+import com.udacity.shoestore.Shoe
+import com.udacity.shoestore.ShoeDataView
 
 class ShoeViewModel : ViewModel() {
 
@@ -26,7 +29,7 @@ class ShoeViewModel : ViewModel() {
 
     fun onSave() {
         _shoeListViewData.value?.add(
-            ShoeDataMapper.mapFromViewData(ShoeDataView)
+            ShoeDataMapper.mapFromViewData(shoeDataView)
         )
         shoeDataView = ShoeDataView()
         _eventNavigate.value = true
