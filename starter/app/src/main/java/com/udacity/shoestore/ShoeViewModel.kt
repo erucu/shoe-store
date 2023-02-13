@@ -26,7 +26,7 @@ class ShoeViewModel : ViewModel() {
 
     fun onSave() {
         _shoeListViewData.value?.add(
-            ShoeDataMapper.mapFromViewData(shoeDataView)
+            ShoeDataMapper.mapFromViewData(ShoeDataView)
         )
         shoeDataView = ShoeDataView()
         _eventNavigate.value = true
