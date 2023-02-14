@@ -12,7 +12,7 @@ data class Shoe(
 ) : Parcelable
 
 
-fun Shoe.asDataView():ShoeDataView = ShoeDataView(
+fun Shoe.asDataView(): ShoeDataView = ShoeDataView(
     shoeName = shoeName,
     shoeCompany = shoeCompany,
     shoeSize = shoeSize.toString(),

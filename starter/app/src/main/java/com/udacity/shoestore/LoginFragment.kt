@@ -15,13 +15,17 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_login, container, false)
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_login, container, false
+        )
         binding.registerButton.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_welcomeFragment)
+            Navigation.findNavController(view)
+                .navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
         binding.loginButton.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_welcomeFragment)
+            Navigation.findNavController(view)
+                .navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
         return binding.root
     }
