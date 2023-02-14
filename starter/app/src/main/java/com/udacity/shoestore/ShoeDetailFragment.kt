@@ -39,7 +39,5 @@ class ShoeDetailFragment : Fragment() {
     }
 
     private fun navigateToShoeList() =
-        findNavController().navigate(
-            ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment()
-        )
+        findNavController().navigateUp()
 }
