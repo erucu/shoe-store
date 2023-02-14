@@ -7,7 +7,7 @@ data class ShoeDataView(
     var shoeDescription: String = ""
 )
 
-fun ShoeDataView.asShoe():Shoe = Shoe(
+fun ShoeDataView.asShoe(): Shoe = Shoe(
     shoeName = shoeName.ifEmpty { "Empty Name" },
     shoeCompany = shoeCompany.ifEmpty { "Company Name" },
     shoeSize = shoeSize.ifEmpty { "0" }.toInt(),
