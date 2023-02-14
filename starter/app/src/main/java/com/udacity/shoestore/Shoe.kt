@@ -10,3 +10,11 @@ data class Shoe(
     var shoeCompany: String,
     var shoeDescription: String,
 ) : Parcelable
+
+
+fun Shoe.asDataView():ShoeDataView = ShoeDataView(
+    shoeName = shoeName,
+    shoeCompany = shoeCompany,
+    shoeSize = shoeSize.toString(),
+    shoeDescription = shoeDescription
+)

@@ -34,6 +34,6 @@
     <data>
         <variable
                 name="viewModel"
-                type="com.udacity.shoestore.ShoeListViewModel" />
+                type="com.udacity.shoestore.ShoeViewModel" />
     </data>
 </layout>
